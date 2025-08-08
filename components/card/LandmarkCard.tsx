@@ -3,8 +3,8 @@ import Image from 'next/image'
 import LandmarkStarRating from './LandmarkStarRating'
 import FavoriteToggleButton from './FavoriteToggleButton'
 
-const LandmarkCards = ({ Landmark } : { Landmark: LandmarkCardProps}) => {
-  const { name, image, id, price, description, province, lat, lng, category } = Landmark
+const LandmarkCards = ({ landmark } : { landmark: LandmarkCardProps}) => {
+  const { name, image, id, price, description, province, lat, lng, category } = landmark
   return (
     <article className='group relative'>
       <div className='relative h-[300px] rounded-md mb-2'>
@@ -34,7 +34,7 @@ const LandmarkCards = ({ Landmark } : { Landmark: LandmarkCardProps}) => {
     </div>
 
     <div className='absolute top-5 right-5'>
-      <FavoriteToggleButton LandmarkId={id}/>
+      <FavoriteToggleButton landmarkId={id}/>
     </div>
 
     </article>

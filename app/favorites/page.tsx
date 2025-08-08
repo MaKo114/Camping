@@ -1,8 +1,12 @@
-import React from 'react'
+import { fecthFavorites } from '@/action/action'
+import LandmarkList from '@/components/home/LandmarkList';
 
-const FavotitesPage = () => {
+const FavotitesPage = async() => {
+  const favorites = await fecthFavorites()
+  console.log(favorites);
+  
   return (
-    <div>FavotitesPage</div>
+    <LandmarkList landmarks={favorites}></LandmarkList>
   )
 }
 

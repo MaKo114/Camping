@@ -1,6 +1,7 @@
 import { fetchLandmarks } from "@/action/action"
 import LandmarkList from "./LandmarkList";
 import { LandmarkCardProps } from "@/utils/types";
+import Hero from "../hero/Hero";
 
 
 const LandmarkContainer = async () => {
@@ -9,7 +10,8 @@ const LandmarkContainer = async () => {
     
   return (
     <div>
-        <LandmarkList Landmarks={landmarks}/>
+      <Hero landmarks={landmarks}/>
+        <LandmarkList landmarks={landmarks}/>
 
     </div>
   )

@@ -4,6 +4,12 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Provider from "./Provider";  
 import { ClerkProvider } from "@clerk/nextjs";
+import { Mitr } from 'next/font/google'
+
+const mitr = Mitr({
+  weight:'300',
+  subsets: ['latin', 'thai']
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +35,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${mitr.className} antialiased`}
         >
           <Provider>
             <Navbar></Navbar>
